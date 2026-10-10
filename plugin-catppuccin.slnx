@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Runesmith.Catppuccin.Contracts/Runesmith.Catppuccin.Contracts.csproj" />
+    <Project Path="src/Runesmith.Catppuccin/Runesmith.Catppuccin.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Runesmith.Catppuccin.Tests/Runesmith.Catppuccin.Tests.csproj" />
+  </Folder>
+</Solution>

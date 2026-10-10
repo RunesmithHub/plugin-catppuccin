@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>The Catppuccin color themes and syntax color schemes for Runesmith: Latte, Frappé, Macchiato and Mocha.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Runesmith.Catppuccin.Contracts\Runesmith.Catppuccin.Contracts.csproj" />
+  </ItemGroup>
+  <!-- Runesmith supplies these when it loads the plugin, so none of them is copied next to it. -->
+  <ItemGroup>
+    <PackageReference Include="Runesmith.Sdk" ExcludeAssets="runtime" />
+  </ItemGroup>
+  <!-- The hub packages only assemblies, so the schemes travel inside this one. -->
+  <ItemGroup>
+    <EmbeddedResource Include="Schemes\*.json" LogicalName="Schemes.%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Runesmith.Catppuccin.Tests" />
+  </ItemGroup>
+</Project>

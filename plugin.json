@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "id": "runesmith.catppuccin",
   "name": "Catppuccin Themes",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "The Catppuccin color themes and syntax colors: Latte, Frappé, Macchiato and Mocha.",
   "authors": [
     "Dylan de Beer"
   ],
   "license": "Apache-2.0",
   "repository": "https://github.com/RunesmithHub/plugin-catppuccin",
-  "runesmithApi": "^0.1.1",
+  "runesmithApi": "^0.2.0",
   "projects": {
     "contracts": "src/Runesmith.Catppuccin.Contracts/Runesmith.Catppuccin.Contracts.csproj",
     "implementation": "src/Runesmith.Catppuccin/Runesmith.Catppuccin.csproj"

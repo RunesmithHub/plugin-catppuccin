@@ -29,7 +29,9 @@ public sealed class ThemeTests
     {
         var colors = Theme(key).Colors;
 
-        foreach (var property in typeof(ThemeColors).GetProperties(BindingFlags.Public | BindingFlags.Instance))
+        Assert.Equal(16, colors.TerminalColors?.Count);
+        Assert.All(colors.TerminalColors!, color => Assert.Matches("^#[0-9A-F]{6}$", color));
+        foreach (var property in typeof(ThemeColors).GetProperties(BindingFlags.Public | BindingFlags.Instance).Where(p => p.PropertyType == typeof(string)))
         {
             var value = (string?)property.GetValue(colors);
             Assert.True(value is not null, $"{property.Name} is not set.");

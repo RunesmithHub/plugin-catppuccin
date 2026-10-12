@@ -18,6 +18,13 @@ public sealed class CatppuccinThemes : IColorThemeContributor
             Colors = new ThemeColors
             {
                 Accent = p.Mauve,
+
+                // The terminal colors Catppuccin gives its ports: black and white are the surfaces, and bright colors repeat the normal ones.
+                TerminalColors =
+                [
+                    flavor.IsDark ? p.Surface1 : p.Subtext1, p.Red, p.Green, p.Yellow, p.Blue, p.Pink, p.Teal, flavor.IsDark ? p.Subtext1 : p.Surface2,
+                    flavor.IsDark ? p.Surface2 : p.Subtext0, p.Red, p.Green, p.Yellow, p.Blue, p.Pink, p.Teal, flavor.IsDark ? p.Subtext0 : p.Surface1,
+                ],
                 AccentForeground = flavor.IsDark ? p.Crust : p.Base,
                 Background = p.Mantle,
                 Surface = p.Base,
